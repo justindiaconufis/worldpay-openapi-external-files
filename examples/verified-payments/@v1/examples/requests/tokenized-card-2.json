@@ -1,0 +1,53 @@
+{
+  "transactionReference": "uniqueId",
+  "merchant": {
+    "entity": "an-entity",
+    "fraud": "fraudSight"
+  },
+  "instruction": {
+    "paymentInstrument": {
+      "type": "card/tokenized",
+      "href": "https://access.worldpay.com/tokens/MTIzNDU2Nzg5MDEyMzQ1Ng",
+      "cvc": "123"
+    },
+    "narrative": {
+      "line1": "trading name"
+    },
+    "value": {
+      "currency": "GBP",
+      "amount": 42
+    }
+  },
+  "deviceData": {
+    "acceptHeader": "text/html",
+    "userAgentHeader": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+    "browserLanguage": "en-GB",
+    "ipAddress": "176.80.113.83"
+  },
+  "challenge": {
+    "returnUrl": "http://payment.example.com"
+  },
+  "riskData": {
+    "account": {
+      "email": "john.appleseed@example.com"
+    },
+    "transaction": {
+      "firstName": "John",
+      "lastName": "Appleseed",
+      "phoneNumber": "00000000000"
+    },
+    "shipping": {
+      "firstName": "Bob",
+      "lastName": "Smith",
+      "address": {
+        "address1": "Address 1",
+        "address2": "Address 2",
+        "address3": "Address 3",
+        "postalCode": "Postal Code",
+        "city": "city",
+        "state": "state",
+        "countryCode": "GB"
+      }
+    }
+  }
+}

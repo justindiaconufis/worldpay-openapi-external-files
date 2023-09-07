@@ -1,0 +1,26 @@
+{
+  "transactionReference":"uniqueId",
+  "merchant":{
+    "entity":"an-entity"
+  },
+  "instruction":{
+    "paymentInstrument":{
+      "type":"card/session",
+      "sessionHref": "https://access-worldpay-simulator:8443/sessions/eyJrIjoxLCJkIjoialRBL0FFelBzcnZpNCtzRGNRemh0NzI0NE1rdUtjMUFJdjYxVnlibWZuUT0ifQ"
+    },
+    "narrative":{
+      "line1":"trading name"
+    },
+    "value":{
+      "currency":"GBP",
+      "amount":42
+    }
+  },
+  "deviceData":{
+    "acceptHeader":"text/html",
+    "userAgentHeader":"Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0)"
+  },
+  "challenge":{
+    "returnUrl":"https://your-website.com/webhook"
+  }
+}

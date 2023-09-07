@@ -1,0 +1,24 @@
+{
+  "outcome": "3dsChallenged",
+  "authentication": {
+    "version": "2.1.0",
+    "type": "3DS"
+  },
+  "challenge": {
+    "reference": "123456789",
+    "url": "https://ChallengePageUrl.example.com",
+    "jwt": "VGhpcyBpcyBhIGJhc2UgNjQgZW5jb2RlZCBleGFtcGxlIG9mIGEgM0RTICJwYXlsb2FkIg==",
+    "payload": "eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMS4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiJlYWYyMDcwMC1mZGQ2LTQ3MzQtYTcyNy1hYTBmYjcwNDI5MmUiLCJhY3NUcmFuc0lEIjoiMWFjMjQ3YTAtOTU3OS00M2M2LWI2ZDUtNTg4NjQ4ZjFmNjFjIiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0"
+  },
+  "transactionReference": "11611",
+  "_links": {
+    "verifiedPayments:3dsChallenge": {
+      "href": "https://access.worldpay.com/verifiedPayments/3dsChallenge/eyJrIjoxLCJkIjoiM1p4TFdwKzV3ZFRZYWUyT1FYd3lMdz09In0"
+    },
+    "curies": [{
+      "href": "https://access.worldpay.com/rels/verifiedPayments/{rel}",
+      "name": "verifiedPayments",
+      "templated": true
+    }]
+  }
+}
