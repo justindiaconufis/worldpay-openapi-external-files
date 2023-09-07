@@ -1,0 +1,118 @@
+{
+  "transactionReference": "uniqueId",
+  "merchant": {
+    "fraud": "fraudSight",
+    "entity": "entity1",
+    "mcc": "1234"
+  },
+  "instruction": {
+    "debtRepayment": true,
+    "paymentInstrument": {
+      "type": "card/wallet+applepay",
+      "walletToken": "{\"version\": \"EC_v1\",\"data\": \"kdHd..GQ==\",\"signature\": \"MIAGCSqGSIb3DQEH...AAA\",\"header\": {\"transactionId\": \"d3b28af..f8\",\"ephemeralPublicKey\": \"MFkwE..Q==\",\"publicKeyHash\": \"dxCK..6o=\" }}",
+      "billingAddress": {
+        "address1": "Address 1",
+        "address2": "Address 2",
+        "address3": "Address 3",
+        "postalCode": "Postal Code",
+        "city": "City",
+        "state": "State",
+        "countryCode": "GB"
+      }
+    },
+    "narrative": {
+      "line1": "trading name",
+      "line2": "order number"
+    },
+    "value": {
+      "currency": "GBP",
+      "amount": 42
+    }
+  },
+  "challenge": {
+    "returnUrl": "https://your-website.com/webhook",
+    "windowSize": "600x400",
+    "preference": "noPreference"
+  },
+  "deviceData": {
+    "acceptHeader": "text/html",
+    "userAgentHeader": "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0)",
+    "tmxSessionId": "0_4XXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXX8G6",
+    "browserLanguage": "en-GB",
+    "ipAddress": "192.0.0.0"
+  },
+  "riskData": {
+    "account": {
+      "dateOfBirth": "1985-11-23",
+      "previousSuspiciousActivity": true,
+      "email": "holmes.sherlock1854@hotmail.com",
+      "shopperId": "id123",
+      "type": "guestUser",
+      "history": {
+        "createdAt": "2002-11-23",
+        "modifiedAt": "2003-10-21",
+        "passwordModifiedAt": "2005-02-10",
+        "paymentAccountEnrolledAt": "2004-09-02"
+      }
+    },
+    "transaction": {
+      "reorder": true,
+      "preOrderDate": "2010-08-04",
+      "firstName": "John",
+      "lastName": "Doe",
+      "phoneNumber": "00000000000",
+      "history": {
+        "attemptsLastDay": 2,
+        "attemptsLastYear": 6,
+        "completedLastSixMonths": 7,
+        "addCardsLastDay": 5,
+        "shippingAddressFirstUsedAt": "2009-02-22"
+      },
+      "giftCardsPurchase": {
+        "totalValue": {
+          "currency": "GBP",
+          "amount": 10
+        },
+        "quantity": 4
+      }
+    },
+    "shipping": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "nameMatchesAccountName": false,
+      "method": "digital",
+      "timeFrame": "electronic",
+      "email": "customer@website.com",
+      "address": {
+        "address1": "Address 1",
+        "address2": "Address 2",
+        "address3": "Address 3",
+        "postalCode": "Postal Code",
+        "city": "City",
+        "state": "State",
+        "countryCode": "GB",
+        "phoneNumber": "+302840838434"
+      }
+    },
+    "custom": {
+      "number1": 1,
+      "number2": 2,
+      "number3": 3,
+      "number4": 4,
+      "number5": 5,
+      "number6": 6,
+      "number7": 7,
+      "number8": 8,
+      "number9": 9,
+      "string1": "1",
+      "string2": "2",
+      "string3": "3",
+      "string4": "4",
+      "string5": "5",
+      "string6": "6",
+      "string7": "7",
+      "string8": "8",
+      "string9": "9"
+    }
+  }
+}
