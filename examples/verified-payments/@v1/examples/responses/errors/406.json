@@ -1,0 +1,5 @@
+{
+  "errorName": "headerIsMissing",
+  "message": "A valid header must be provided.",
+  "headerName": "Accept"
+}
