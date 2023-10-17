@@ -1,0 +1,102 @@
+{
+  "transactionReference": "uniqueId",
+  "merchant": {
+    "entity": "an-entity",
+    "fraud": "fraudSightSilentMODE"
+  },
+  "instruction": {
+    "debtRepayment": true,
+    "paymentInstrument": {
+      "type": "card/session",
+      "cardHolderName": "John Apppleseed",
+      "billingAddress": {
+        "address1": "address line 1",
+        "address2": "address line 2",
+        "address3": "address line 3",
+        "postalCode": "12345",
+        "city": "London",
+        "state": "Greater London",
+        "countryCode": "GB"
+      }
+    },
+    "narrative": {
+      "line1": "trading name",
+      "line2": "trading name"
+    },
+    "createToken": {
+      "type": "WorldPay",
+      "namespace": "SHOPPER_ID_1234567890",
+      "description": "Test Token Description"
+    },
+    "value": {
+      "currency": "GBP",
+      "amount": 42
+    }
+  },
+  "deviceData": {
+    "tmxSessionId": "1_7c1c52a1-4d8d-46fd-8db6-4f882485e052",
+    "acceptHeader": "text/html",
+    "userAgentHeader": "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0)",
+    "browserLanguage": "en-GB",
+    "ipAddress": "192.0.0.0"
+  },
+  "challenge": {
+    "windowSize": "600x400",
+    "preference": "noPreference",
+    "returnUrl": "http://payment.example.com"
+  },
+  "riskData": {
+    "account": {
+      "shopperId": "1234",
+      "previousSuspiciousActivity": false,
+      "type": "registeredUser",
+      "email": "john.appleseed@example.com",
+      "dateOfBirth": "1990-01-06",
+      "history": {
+        "createdAt": "2019-11-18",
+        "modifiedAt": "2019-11-18",
+        "passwordModifiedAt": "2019-10-15",
+        "paymentAccountEnrolledAt": "2019-11-18"
+      }
+    },
+    "transaction": {
+      "reorder": true,
+      "preOrderDate": "2019-11-18",
+      "firstName": "John",
+      "lastName": "Appleseed",
+      "phoneNumber": "00000000000",
+      "history": {
+        "attemptsLastDay": 2,
+        "attemptsLastYear": 6,
+        "completedLastSixMonths": 6,
+        "addCardsLastDay": 5,
+        "shippingAddressFirstUsedAt": "2018-09-18"
+      },
+      "giftCardsPurchase": {
+        "totalValue": {
+          "currency": "GBP",
+          "amount": 10
+        },
+        "quantity": 4
+      }
+    },
+    "shipping": {
+      "firstName": "Bob",
+      "lastName": "Smith",
+      "address": {
+        "address1": "address line 1",
+        "address2": "address line 2",
+        "address3": "address line 3",
+        "postalCode": "23456",
+        "city": "Durham",
+        "state": "County Durham",
+        "countryCode": "GB",
+        "phoneNumber": "01911234321"
+      },
+      "nameMatchesAccountName": false,
+      "method": "verifiedAddress",
+      "timeFrame": "nextDay",
+      "email": "bob.smith@example.com"
+    }
+  }
+}
