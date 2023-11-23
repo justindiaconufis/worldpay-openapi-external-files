@@ -1,0 +1,26 @@
+{
+  "outcome": "sentForSettlement",
+  "transactionReference": "uniqueId",
+  "_links": {
+    "payments:refund": {
+      "href": "https://access-worldpay-simulator:8443/payments/settlements/refunds/full/eyJrIjoiazNhYjYzMiJ9"
+    },
+    "payments:partialRefund": {
+      "href": "https://access-worldpay-simulator:8443/payments/settlements/refunds/partials/eyJrIjoiazNhYjYzMiJ9"
+    },
+    "payments:events": {
+      "href": "https://access-worldpay-simulator:8443/payments/events/eyJrIjoiazNhYjYzMiJ9"
+    },
+    "curies": [{
+      "href": "https://localhost:443/rels/verifiedPayments/{rel}",
+      "name": "verifiedPayments",
+      "templated": true
+    },
+      {
+        "href": "https://access-worldpay-simulator:8443/rels/payments/{rel}",
+        "name": "payments",
+        "templated": true
+      }
+    ]
+  }
+}

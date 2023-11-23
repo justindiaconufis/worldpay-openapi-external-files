@@ -1,0 +1,11 @@
+{
+  "errorName": "bodyDoesNotMatchSchema",
+  "message": "A JSON body matching the expected schema must be provided.",
+  "validationErrors": [
+    {
+      "errorName": "fieldIsNotAllowed",
+      "message": "Field at path is not allowed.",
+      "jsonPath": "$.instruction.paymentInstrument.narrative"
+    }
+  ]
+}
