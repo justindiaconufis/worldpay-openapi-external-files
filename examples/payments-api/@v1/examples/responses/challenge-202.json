@@ -1,0 +1,55 @@
+{
+  "outcome": "sentForSettlement",
+  "transactionReference": "uniqueId",
+  "riskFactors": [
+    {
+      "risk": "not_checked",
+      "type": "cvc"
+    },
+    {
+      "risk": "not_checked",
+      "detail": "address",
+      "type": "avs"
+    }
+  ],
+  "fraud": {
+    "outcome": "error"
+  },
+  "3DS": {
+    "outcome": "authenticated",
+    "issuerResponse": "frictionless"
+  },
+  "token": {
+    "href": "https://access.worldpay.com/tokens/eyJrIjoxLC......",
+    "tokenId": "9902480679618049603",
+    "tokenExpiryDateTime": "2021-06-24T09:19:35Z",
+    "cardNumber": "4444********1111",
+    "cardHolderName": "John Apppleseed",
+    "cardExpiry": {
+      "month": 5,
+      "year": 2035
+    },
+    "bin": "444433",
+    "fundingType": "credit",
+    "countryCode": "GB",
+    "schemeReference": "444444"
+  },
+  "_links": {
+    "payments:refund": {
+      "href": "https://access.worldpay.com/payments/settlements/refunds/full/:linkData"
+    },
+    "payments:partialRefund": {
+      "href": "https://access.worldpay.com/payments/settlements/refunds/partials/:linkData"
+    },
+    "payments:events": {
+      "href": "https://access.worldpay.com/payments/events/:linkData"
+    },
+    "curies": [
+      {
+        "name": "payments",
+        "href": "https://access.worldpay.com/rels/payments/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}

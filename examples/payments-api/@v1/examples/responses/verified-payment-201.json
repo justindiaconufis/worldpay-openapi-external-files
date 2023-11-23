@@ -1,0 +1,19 @@
+{
+  "outcome": "3dsDeviceDataRequired",
+  "deviceDataCollection": {
+    "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJPcmdVbml0SWQiOiJPcmdVbml0IiwiaXNzIjoiYXBpSWQiLCJleHAiOjE1NjI5MjMzNDYsImlhdCI6MTU2MjkyMzQwNiwianRpIjoiYTAzMWVhOGEtN2E0Zi00YTQwLWI1NjMtOTUzMzYzMzVhZGNmIn0.0IK74OIXBxFsxqeOURJz1TFnz14ZTbFJTdTWo9cHUJQ",
+    "url": "https://ddcUrl.example.com",
+    "bin": "555555"
+  },
+  "transactionReference": "11611",
+  "_links": {
+    "verifiedPayments:3dsDeviceData": {
+      "href": "https://access.worldpay.com/verifiedPayments/3dsDeviceData/eyJrIjoxLCJkIjoiM1p4TFdwKzV3ZFRZYWUyT1FYd3lMdz09In0"
+    },
+    "curies": [{
+      "href": "https://access.worldpay.com/rels/verifiedPayments/{rel}",
+      "name": "verifiedPayments",
+      "templated": true
+    }]
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "errorName": "endpointNotFound",
+  "message": "Requested endpoint was not found."
+}
