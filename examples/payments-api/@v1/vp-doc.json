@@ -28,16 +28,31 @@
           {
             "name": "Content-Type",
             "in": "header",
+            "description": "application/json",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "description": "application/json"
+            }
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "description": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "description": "application/json"
             }
           },
           {
             "name": "WP-Api-Version",
             "in": "header",
+            "description": "The API version",
+            "required": true,
             "schema": {
               "type": "string",
+              "description": "The API version",
               "enum": [
                 "2023-06-01"
               ]
@@ -97,70 +112,6 @@
           "required": true
         },
         "responses": {
-          "400": {
-            "description": "Bad request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ValidationErrorResponse"
-                },
-                "examples": {
-                  "Bad request": {
-                    "description": "Bad request",
-                    "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/errors/400.json"
-                  }
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                },
-                "examples": {
-                  "Unauthorized": {
-                    "description": "Unauthorized",
-                    "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/errors/401.json"
-                  }
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                },
-                "examples": {
-                  "Not found": {
-                    "description": "Not found",
-                    "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/errors/404.json"
-                  }
-                }
-              }
-            }
-          },
-          "406": {
-            "description": "Not acceptable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                },
-                "examples": {
-                  "Not acceptable": {
-                    "description": "Not acceptable",
-                    "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/errors/406.json"
-                  }
-                }
-              }
-            }
-          },
           "201": {
             "description": "Created",
             "content": {
@@ -172,6 +123,22 @@
                   "Payment created": {
                     "description": "Payment created",
                     "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/verified-payment-201.json"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationErrorResponse"
+                },
+                "examples": {
+                  "Bad request": {
+                    "description": "Bad request",
+                    "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/errors/400.json"
                   }
                 }
               }
@@ -193,6 +160,22 @@
               }
             }
           },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "examples": {
+                  "Not found": {
+                    "description": "Not found",
+                    "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/errors/404.json"
+                  }
+                }
+              }
+            }
+          },
           "500": {
             "description": "Internal server error",
             "content": {
@@ -209,6 +192,22 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "examples": {
+                  "Unauthorized": {
+                    "description": "Unauthorized",
+                    "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/errors/401.json"
+                  }
+                }
+              }
+            }
+          },
           "415": {
             "description": "Unsupported media type",
             "content": {
@@ -220,6 +219,22 @@
                   "Unsupported media type": {
                     "description": "Unsupported media type",
                     "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/errors/415.json"
+                  }
+                }
+              }
+            }
+          },
+          "406": {
+            "description": "Not acceptable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "examples": {
+                  "Not acceptable": {
+                    "description": "Not acceptable",
+                    "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/errors/406.json"
                   }
                 }
               }
@@ -257,16 +272,31 @@
           {
             "name": "Content-Type",
             "in": "header",
+            "description": "application/json",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "description": "application/json"
+            }
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "description": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "description": "application/json"
             }
           },
           {
             "name": "WP-Api-Version",
             "in": "header",
+            "description": "The API version",
+            "required": true,
             "schema": {
               "type": "string",
+              "description": "The API version",
               "enum": [
                 "2023-06-01"
               ]
@@ -292,6 +322,22 @@
           }
         },
         "responses": {
+          "202": {
+            "description": "Accepted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentsResponse"
+                },
+                "examples": {
+                  "Example of 3dsDeviceData without collectionReference": {
+                    "description": "Example of 3dsDeviceData without collectionReference",
+                    "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/device-data-202.json"
+                  }
+                }
+              }
+            }
+          },
           "400": {
             "description": "Bad request",
             "content": {
@@ -324,54 +370,6 @@
               }
             }
           },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                },
-                "examples": {
-                  "Unauthorized": {
-                    "description": "Unauthorized",
-                    "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/errors/401.json"
-                  }
-                }
-              }
-            }
-          },
-          "202": {
-            "description": "Accepted",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/PaymentsResponse"
-                },
-                "examples": {
-                  "Example of 3dsDeviceData without collectionReference": {
-                    "description": "Example of 3dsDeviceData without collectionReference",
-                    "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/device-data-202.json"
-                  }
-                }
-              }
-            }
-          },
-          "406": {
-            "description": "Not acceptable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                },
-                "examples": {
-                  "Not acceptable": {
-                    "description": "Not acceptable",
-                    "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/errors/406.json"
-                  }
-                }
-              }
-            }
-          },
           "500": {
             "description": "Internal server error",
             "content": {
@@ -388,6 +386,22 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "examples": {
+                  "Unauthorized": {
+                    "description": "Unauthorized",
+                    "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/errors/401.json"
+                  }
+                }
+              }
+            }
+          },
           "415": {
             "description": "Unsupported media type",
             "content": {
@@ -399,6 +413,22 @@
                   "Unsupported media type": {
                     "description": "Unsupported media type",
                     "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/errors/415.json"
+                  }
+                }
+              }
+            }
+          },
+          "406": {
+            "description": "Not acceptable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "examples": {
+                  "Not acceptable": {
+                    "description": "Not acceptable",
+                    "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/errors/406.json"
                   }
                 }
               }
@@ -436,16 +466,31 @@
           {
             "name": "Content-Type",
             "in": "header",
+            "description": "application/json",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "description": "application/json"
+            }
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "description": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "description": "application/json"
             }
           },
           {
             "name": "WP-Api-Version",
             "in": "header",
+            "description": "The API version",
+            "required": true,
             "schema": {
               "type": "string",
+              "description": "The API version",
               "enum": [
                 "2023-06-01"
               ]
@@ -469,22 +514,6 @@
           "required": true
         },
         "responses": {
-          "202": {
-            "description": "Accepted",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/PaymentsResponse"
-                },
-                "examples": {
-                  "Example of 3dsChallenge": {
-                    "description": "Example of 3dsChallenge",
-                    "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/challenge-202.json"
-                  }
-                }
-              }
-            }
-          },
           "400": {
             "description": "Bad request",
             "content": {
@@ -496,38 +525,6 @@
                   "Bad request": {
                     "description": "Bad request",
                     "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/errors/400.json"
-                  }
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                },
-                "examples": {
-                  "Unauthorized": {
-                    "description": "Unauthorized",
-                    "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/errors/401.json"
-                  }
-                }
-              }
-            }
-          },
-          "406": {
-            "description": "Not acceptable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                },
-                "examples": {
-                  "Not acceptable": {
-                    "description": "Not acceptable",
-                    "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/errors/406.json"
                   }
                 }
               }
@@ -549,6 +546,22 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "examples": {
+                  "Unauthorized": {
+                    "description": "Unauthorized",
+                    "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/errors/401.json"
+                  }
+                }
+              }
+            }
+          },
           "415": {
             "description": "Unsupported media type",
             "content": {
@@ -560,6 +573,38 @@
                   "Unsupported media type": {
                     "description": "Unsupported media type",
                     "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/errors/415.json"
+                  }
+                }
+              }
+            }
+          },
+          "202": {
+            "description": "Accepted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentsResponse"
+                },
+                "examples": {
+                  "Example of 3dsChallenge": {
+                    "description": "Example of 3dsChallenge",
+                    "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/challenge-202.json"
+                  }
+                }
+              }
+            }
+          },
+          "406": {
+            "description": "Not acceptable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "examples": {
+                  "Not acceptable": {
+                    "description": "Not acceptable",
+                    "externalValue": "https://raw.githubusercontent.com/justindiaconufis/worldpay-openapi-external-files/main/examples/payments-api/%40v1/examples/responses/errors/406.json"
                   }
                 }
               }
@@ -577,26 +622,6 @@
         "properties": {
           "collectionReference": {
             "type": "string"
-          }
-        }
-      },
-      "ValidationErrorResponse": {
-        "type": "object",
-        "properties": {
-          "errorName": {
-            "type": "string"
-          },
-          "message": {
-            "type": "string"
-          },
-          "jsonPath": {
-            "type": "string"
-          },
-          "validationErrors": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ValidationErrorResponse"
-            }
           }
         }
       },
@@ -630,6 +655,26 @@
           },
           "_links": {
             "$ref": "#/components/schemas/Links"
+          }
+        }
+      },
+      "ValidationErrorResponse": {
+        "type": "object",
+        "properties": {
+          "errorName": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "jsonPath": {
+            "type": "string"
+          },
+          "validationErrors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ValidationErrorResponse"
+            }
           }
         }
       },
